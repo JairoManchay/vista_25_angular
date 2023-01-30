@@ -1,0 +1,43 @@
+
+<section class="container">
+  <article class="row d-flex justify-content-center  p-5">
+
+    <section class="col-7  d-flex flex-column align-items-center w-50">
+
+      <form action="" class="shadow p-4 caja_form" >
+
+        <section class="cuadro_imagen">
+          <img src="./assets/certus_image.png" alt="imagen_certus">
+        </section>
+
+        <section>
+          <mat-form-field appearance="fill">
+            <mat-label>Fill form field</mat-label>
+            <input matInput placeholder="Placeholder" class="input_login">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+        </section>
+
+
+        <section >
+          <mat-form-field appearance="fill">
+            <mat-label>Enter your password</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field>
+        </section>
+
+        <section class="d-flex justify-content-center">
+          <input type="submit" class="btn btn-outline-primary" value="Enviar" (click)="login()">
+        </section>
+      </form>
+    </section>
+
+
+
+
+
+  </article>
+</section>
